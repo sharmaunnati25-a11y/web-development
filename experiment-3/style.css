@@ -1,0 +1,71 @@
+/* ============================================================
+   To-Do Application Stylesheet - Experiment 3
+   ============================================================ */
+
+body {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.card {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+.task-item {
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem !important;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e2e8f0;
+  padding: 0.85rem 1rem;
+}
+
+.task-item:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Strikethrough for completed tasks */
+.task-completed .task-text {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.task-completed {
+  background-color: #f8fafc;
+}
+
+/* Checkbox styling */
+.task-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+/* Delete button hover */
+.delete-btn {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.task-item:hover .delete-btn {
+  opacity: 1;
+}
+
+/* Priority tags */
+.priority-badge-High {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.priority-badge-Normal {
+  background-color: #e0e7ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.priority-badge-Low {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
