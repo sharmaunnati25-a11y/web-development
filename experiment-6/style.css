@@ -1,0 +1,117 @@
+/* ============================================================
+   Responsive Blog Stylesheet - Experiment 6
+   Demonstrating CSS3 Media Queries and Fluid Breakpoints
+   ============================================================ */
+
+:root {
+  --primary-accent: #3b82f6;
+  --secondary-accent: #6366f1;
+  --bg-color: #f8fafc;
+  --text-dark: #0f172a;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Breakpoint visual indicator for lab evaluation */
+.breakpoint-indicator {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 9999;
+  border: 1px solid #38bdf8;
+}
+
+/* Blog Hero Banner */
+.blog-hero {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-bottom: 3px solid var(--primary-accent);
+}
+
+.author-avatar {
+  width: 70px;
+  height: 70px;
+  background-color: #e0e7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.blog-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ============================================================
+   EXPLICIT CSS MEDIA QUERIES (Mobile-First / Adaptive Design)
+   ============================================================ */
+
+/* 1. Mobile Devices (Portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+  .hero-lead {
+    font-size: 1rem;
+  }
+  .blog-card-img {
+    height: 160px;
+  }
+  .blog-card .card-body {
+    padding: 1.25rem !important;
+  }
+  .sidebar-wrapper {
+    margin-top: 2rem;
+  }
+}
+
+/* 2. Tablets and Medium Devices (576px to 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero-title {
+    font-size: 2.15rem;
+  }
+  .blog-card-img {
+    height: 180px;
+  }
+  .sidebar-wrapper {
+    margin-top: 2.5rem;
+  }
+}
+
+/* 3. Desktops and Large Screens (992px and up) */
+@media (min-width: 992px) {
+  .hero-title {
+    font-size: 2.65rem;
+    line-height: 1.2;
+  }
+  .sidebar-wrapper {
+    position: sticky;
+    top: 90px;
+  }
+}
