@@ -1,0 +1,35 @@
+/* ============================================================
+   Weather Application Stylesheet - Experiment 5
+   ============================================================ */
+
+body {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.weather-card-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.quick-city {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.quick-city:hover {
+  background-color: #ffffff;
+  color: #1e3a8a;
+}
+
+#weatherIconContainer i {
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.forecast-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
